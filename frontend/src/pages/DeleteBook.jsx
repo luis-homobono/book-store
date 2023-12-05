@@ -15,11 +15,12 @@ const DeleteBook = () => {
             .delete(`http://127.0.0.1:5555/books/${id}`)
             .then(() => {
                 setLoading(false);
+                enqueueSnackbar('Book Deleted successfully', { variant: 'success' })
                 navigate('/');
             })
             .catch((error) => {
                 setLoading(false);
-                alert('An error happened. Please Check console');
+                enqueueSnackbar('Error Book not deleted', { variant: 'error' })
                 console.log(error);
             })
     }

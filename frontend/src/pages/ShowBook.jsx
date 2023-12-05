@@ -28,7 +28,7 @@ const ShowBook = () => {
             <Backbutton />
             <h1 className="text-3xl my-4">Show Book</h1>
             {loading ? (
-                <Spinner/>
+                <Spinner />
             ) : (
                 <div className="flex flex-col border-2 border-sky-400 rounded-xl w-fit p-4">
                     <div className="my-4">
@@ -53,7 +53,7 @@ const ShowBook = () => {
                     </div> */}
                 </div>
             )
-        }
+            }
         </div>
     )
 }

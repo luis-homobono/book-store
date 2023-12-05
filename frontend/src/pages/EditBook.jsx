@@ -21,11 +21,12 @@ const EditBook = () => {
                 setTitle(response.data.title);
                 setAuthor(response.data.author);
                 setPublishYear(response.data.publishYear);
+                enqueueSnackbar('Book Edited successfully', { variant: 'success' })
                 setLoading(false);
             })
             .catch((error) => {
                 setLoading(false);
-                alert('An error happened. Please Check console');
+                enqueueSnackbar('Error Book not saved ', { variant: 'error' })
                 console.log(error);
             });
     }, []);
